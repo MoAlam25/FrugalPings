@@ -12,3 +12,7 @@ def handle_amazon_entry(new_entry):
         if(discount_present(amazon_ref_data['price'], new_entry['finalPrice']['value'])):
             create_notification_amazon(Notification_type.UPDATE, new_entry, amazon_ref_data)
             update_amazon_entry(new_entry)
+    else:
+        if(discount_present(amazon_ref_data['price'], new_entry['finalPrice']['value'])):
+            create_notification_amazon(Notification_type.UPDATE, new_entry, amazon_ref_data)
+            update_amazon_entry(new_entry)
